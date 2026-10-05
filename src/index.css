@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Fonts: also add the <link> tags from the guide to index.html <head> */
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #fafaf8;
+  --color-ink: #1c1c1e;
+  --color-muted: #6b7280;
+  --color-line: #e5e7eb;
+  --color-card: #ffffff;
+  --color-brand: #059669;
+  --color-brand-dark: #047857;
+  --color-brand-soft: #ecfdf5;
+  --color-loss: #dc2626;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Sticky navbar is ~72px tall, so anchored sections need an offset */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* Money should line up in columns */
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
