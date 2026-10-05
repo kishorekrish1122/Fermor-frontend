@@ -3,6 +3,7 @@
 An independent homepage concept for [Fermor](https://fermor.in), built as a frontend developer assignment. It is not an official Fermor site.
 
 **Live demo:** ADD_YOUR_VERCEL_URL_HERE
+
 **GitHub:** https://github.com/kishorekrish1122/Fermor-frontend
 
 ## Overview
@@ -35,9 +36,9 @@ The homepage is built around that promise. Instead of a mock dashboard full of f
 
 **A calculator as the product visual.** A mock dashboard with invented balances says little. A calculator the visitor can drag makes the value of the product clear in seconds.
 
-**Computed numbers.** All figures come from `src/lib/finance.js` (SIP future value, EMI, real return after inflation) and are formatted with Indian digit grouping and lakh/crore shorthand in `src/lib/format.js`. Nothing in the insights is hardcoded.
+**Computed numbers.** All figures come from src/lib/finance.js (SIP future value, EMI, real return after inflation) and are formatted with Indian digit grouping and lakh/crore shorthand in src/lib/format.js. Nothing in the insights is hardcoded.
 
-**Visual system.** Off-white background, charcoal text, white cards with light gray borders and a single restrained emerald accent used for actions and positive values. One typeface (Manrope) with tabular numerals so money lines up. Colors and fonts are defined once as Tailwind theme tokens in `src/index.css`.
+**Visual system.** Off-white background, charcoal text, white cards with light gray borders and a single restrained emerald accent used for actions and positive values. One typeface (Manrope) with tabular numerals so money lines up. Colors and fonts are defined once as Tailwind theme tokens in src/index.css.
 
 **Different layouts per section.** A sticky-heading split list for the value section, a two-panel calculator, a numbered timeline for the three steps (the only place numbers make sense, because it is a sequence) and a featured-plus-grid layout for insights.
 
@@ -51,21 +52,31 @@ The homepage is built around that promise. Instead of a mock dashboard full of f
 
 ## Project Structure
 
+    src/
+    ├── components/
+    │   ├── ui/            Button, Section (shared wrappers)
+    │   ├── Navbar.jsx
+    │   ├── Hero.jsx
+    │   ├── ValueSection.jsx
+    │   ├── DashboardPreview.jsx   (the SIP calculator)
+    │   ├── FinancialCard.jsx
+    │   ├── HowItWorks.jsx
+    │   ├── Insights.jsx
+    │   ├── CTA.jsx
+    │   └── Footer.jsx
+    ├── data/              navLinks, insights
+    ├── lib/               finance math, number formatting
+    ├── App.jsx
+    ├── main.jsx
+    └── index.css          theme tokens
+
 ## Run Locally
 
-1. Clone the repository
-```bash
-   git clone https://github.com/kishorekrish1122/Fermor-frontend.git
-   cd Fermor-frontend
-```
-2. Install dependencies
-```bash
-   npm install
-```
-3. Start the development server
-```bash
-   npm run dev
-```
-4. Open http://localhost:5173
+Clone the repository, install dependencies and start the development server:
 
-To create a production build, run `npm run build`.
+    git clone https://github.com/kishorekrish1122/Fermor-frontend.git
+    cd Fermor-frontend
+    npm install
+    npm run dev
+
+Then open http://localhost:5173. To create a production build, run npm run build.
