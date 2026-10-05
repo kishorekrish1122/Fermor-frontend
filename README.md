@@ -2,7 +2,7 @@
 
 An independent homepage concept for [Fermor](https://fermor.in), built as a frontend developer assignment. It is not an official Fermor site.
 
-**Live demo:** ADD_YOUR_VERCEL_URL_HERE
+**Live demo:** https://fermor-frontend.netlify.app
 
 **GitHub:** https://github.com/kishorekrish1122/Fermor-frontend
 
