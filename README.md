@@ -51,26 +51,6 @@ The homepage is built around that promise. Instead of a mock dashboard full of f
 
 ## Project Structure
 
-```
-src/
-├── components/
-│   ├── ui/            Button, Section (shared wrappers)
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── ValueSection.jsx
-│   ├── DashboardPreview.jsx   (the SIP calculator)
-│   ├── FinancialCard.jsx
-│   ├── HowItWorks.jsx
-│   ├── Insights.jsx
-│   ├── CTA.jsx
-│   └── Footer.jsx
-├── data/              navLinks, insights
-├── lib/               finance math, number formatting
-├── App.jsx
-├── main.jsx
-└── index.css          theme tokens
-```
-
 ## Run Locally
 
 1. Clone the repository
